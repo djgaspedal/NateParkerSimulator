@@ -22,8 +22,42 @@ public class HelloWorldSwing implements ImageObserver {
      	* this method should be invoked from the
      	* event-dispatching thread.
     */
+	
+	
+	
+	static void button1DisplayerMethod(JFrame localFrame) { 
+    	
+        JButton b = new JButton("Click Here For SugarValleySyndrome!!!");
+        localFrame.add(b);
+        
+        b.setBounds(200, 200, 275, 75); //positionX, positionY, width, height ||| orig: 20,50
+        
+        
+    }
+	
+    static void nateParkerImageDisplayer(JFrame localFrame) {
+        
+        JPanel pic = new JPanel();
+        ImageIcon pc = new ImageIcon("images/nateParkerImg.jpg");
+        JLabel lab = new JLabel(pc, SwingConstants.CENTER);
+         
+        // Display Params. for the Nate Parker Image
+        pic.add(lab);
+        
+        //adds pic and sets Visible/Size
+        localFrame.add(pic);
+        localFrame.setSize(800, 1000);
+        localFrame.setVisible(true);
+    }
     
     static void EventHandlerHelloWorldSwing() {
+    	
+    	
+    	final JFrame mainFrameContainer = new JFrame("HelloWorldSwing");
+    	mainFrameContainer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	
+    	final JFrame mainImageContainer = new JFrame();
+        mainImageContainer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
     	// Schedule a job for the event-dispatching thread:
         // Creating and showing this application's GUI.
@@ -33,11 +67,11 @@ public class HelloWorldSwing implements ImageObserver {
         		public void run() {
         			
         			// Create and set up the window.
-        	        JFrame mainFrameContainer = new JFrame("HelloWorldSwing");
+        	        //mainFrameContainer = new JFrame("HelloWorldSwing");
         	        mainFrameContainer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         	        
         	        // Sets Location of
-        	        mainFrameContainer.setBounds(400,400,100, 40);
+        	        mainFrameContainer.setBounds(250, 250, 400, 400);
 
         	        // Add the ubiquitous "Hello Nate Parker" label.
         	        JLabel label = new JLabel("Hello Nate Parker \n");
@@ -54,32 +88,20 @@ public class HelloWorldSwing implements ImageObserver {
         
         );
         
-        // New JFrame
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel pic = new JPanel();
-        ImageIcon pc = new ImageIcon("images/nateParkerImg.jpg");
-        JLabel lab = new JLabel(pc, SwingConstants.CENTER);
-        
-        // Display Params. for the Nate Parker Image
-        pic.add(lab);
-        frame.add(pic);
-        frame.setSize(800, 1000);
-        frame.setVisible(true);
+        button1DisplayerMethod(mainImageContainer);
+        nateParkerImageDisplayer(mainImageContainer);
         
     }
     
     
-    public static void main(String[] args) {
-    	
-    	// runs EventHandlerHelloWorldSwing() in SimulatorRun.java file
-    	
-    }
-
-	@Override
+    @Override
 	public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
     
+    public static void main(String[] args) {
+    	// runs EventHandlerHelloWorldSwing() in SimulatorRun.java file 
+    }
+
 }
