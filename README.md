@@ -13,5 +13,6 @@ This project is not sponsored by:
 
 >Microsoft Windows
 
->LinuxForever <3 <3
->Enjoy this project, especially Brocway </3
+LinuxForever <3 <3
+
+Enjoy this project, especially Brocway </3
