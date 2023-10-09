@@ -27,7 +27,7 @@ public class HelloWorldSwing implements ImageObserver {
 	
 	static void button1DisplayerMethod(JFrame localFrame) { 
     	
-        JButton b = new JButton("Click Here For SugarValleySyndrome!!!");
+        JButton b = new JButton("Click Here For One Piece Rule34");
         localFrame.add(b);
         
         b.setBounds(200, 200, 275, 75); //positionX, positionY, width, height ||| orig: 20,50
@@ -76,6 +76,7 @@ public class HelloWorldSwing implements ImageObserver {
         	        // Add the ubiquitous "Hello Nate Parker" label.
         	        JLabel label = new JLabel("Hello Nate Parker \n");
         	        mainFrameContainer.getContentPane().add(label);
+        	        label.setSize(150, 40);
         	        
 
         	        // Display the window.
